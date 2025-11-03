@@ -1,0 +1,27 @@
+/* App Styles */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-bar{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}

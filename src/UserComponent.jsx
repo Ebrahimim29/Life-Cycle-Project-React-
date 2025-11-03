@@ -10,9 +10,24 @@ const UserComponent = () => {
         //Mounting: زمانی که component بارگذاری می شود
         console.log("send a request to the server");
        
+        //Side-Effect:یعنی عملیاتی که به جز رندر کردن component انجام می شود
+        const handleClick = () => {
+            console.log("Age is 20");            
+        }
+
+        const element = document.getElementById("age");
+        if (element) {
+            element.addEventListener("click", handleClick);
+        }
+        
         return () => {
         //Unmounting: زمانی که component حذف می شود
         console.log("Hoping to meet you");
+
+        //Cleanup: زمانی که component حذف می شود
+        if (element) {
+            element.removeEventListener("click", handleClick);
+        }
         };
     }, []);
     
