@@ -2,17 +2,23 @@ import { useState } from "react";
 import UserComponent from "./UserComponent";
 import GuestComponent from "./GuestComponent";
 
-const App = () =>{
-
-  const [isLogined , setIsLogined] = useState(false);
+const App = () => {
+  const [isLogined, setIsLogined] = useState(false);
 
   return (
-    <div>
-      <button onClick={() => setIsLogined(!isLogined)}>
-        {isLogined ? "Logout" : "Login"}
-      </button>
-
-      {isLogined ? <UserComponent/> : <GuestComponent/>}
+    <div className="app-container">
+      <div className="app-background"></div>
+      <div className="nav-bar">
+        <button
+          className={`toggle-btn ${isLogined ? "logout" : "login"}`}
+          onClick={() => setIsLogined(!isLogined)}
+        >
+          {isLogined ? "Logout" : "Login"}
+        </button>
+      </div>
+      <div className="app-content">
+        {isLogined ? <UserComponent /> : <GuestComponent />}
+      </div>
     </div>
   );
 };

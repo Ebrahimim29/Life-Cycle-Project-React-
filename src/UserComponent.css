@@ -1,0 +1,11 @@
+.user-container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #f23a, #ea76f2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* part 335- 5:13 */

@@ -25,3 +25,51 @@ body{
     position: relative;
     z-index: 10;
 }
+
+.toggle-btn{
+    background: linear-gradient(to right, #6c5ce7, #a29bfe, #00b894, #55efc4);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.toggle-btn:active{
+    transform: translateY(-1px);
+    background: yellowgreen;
+}
+
+.toggle-btn.login{
+    background: linear-gradient(to right, red , blue);
+}
+
+.toggle-btn.logout{
+    background: linear-gradient(to right, yellowgreen , aqua);
+}
+
+.app-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at top right, rgba(10,18,188,0.5),transparent 40%),
+                radial-gradient(circle at bottom left, rgba(10,192,23,0.5),transparent 40%);
+}
+
+.app-content{
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
