@@ -8,4 +8,41 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* part 335- 5:13 */
+.user-title{
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+.user-title::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+}
+
+.user-btn{
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 1s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(108, 92, 231, 0.5);
+}

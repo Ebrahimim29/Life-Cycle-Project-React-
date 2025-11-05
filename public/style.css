@@ -73,3 +73,38 @@ body{
     justify-content: center;
     position: relative;
 }
+
+/* Transition for component switching */
+.fade-enter{
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.fade-enter-active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms, transform 500ms;
+}
+
+.fade-exit{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-exit-active{
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 500ms, transform 500ms;
+}
+
+@media (max-width:768px) {
+    .nav-bar{
+        padding: 10px;
+    }
+
+    .toggle-btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

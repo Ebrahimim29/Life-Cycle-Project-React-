@@ -1,3 +1,5 @@
+import "./GuestComponent.css";
+
 const GuestComponent = () => {
 
     return(
