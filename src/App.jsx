@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UserComponent from "./UserComponent";
 import GuestComponent from "./GuestComponent";
+import {Modal, Button} from 'react-bootstrap';
 
 const headerStyle = {
   width: '100%',
@@ -22,6 +23,10 @@ const headerStyle = {
 
 const App = () => {
   const [isLogined, setIsLogined] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
 
   return (
     <div className="app-container">
@@ -70,6 +75,71 @@ const App = () => {
       <div className="app-content">
         {isLogined ? <UserComponent /> : <GuestComponent />}
       </div>
+
+      {/* Bootstrap */}
+      {/* <div className="container mt-5">
+          <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exapleModal"
+          >
+            بازکردن مودال
+          </button>
+
+          <div
+          className="modal fade"
+          id="exampleModal"
+          tabIndex={-1}
+          aria-labelledby="exampleModalLable"
+          aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLable">
+                    عنوان مودال
+                  </h5>
+                  <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-lable="بستن"
+                  ></button>
+                </div>
+                <div className="modal-body">سلام این یک مودال است.😎</div>
+                <div className="modal-footer">
+                  <button
+                   type="button"
+                   className="btn btn-secondary"
+                   data-bs-dismiss="modal"
+                   >
+                    بستن
+                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div> */}
+
+      {/* Component Bootstrap */}
+      
+      <Button variant="primary" onClick={handleShow}>
+        بازکردن مودال
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>عنوان مودال</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>سلام! این یک مودال با React-Bootstrap است😉</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            بستن
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      
     </div>
   );
 };
